@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+    <nav class="flex justify-between items-center p-8 max-w-6xl mx-auto">
+        <div class="text-xl font-bold">TonNom</div>
+        <ul class="flex space-x-6 font-medium text-gray-600">
+            <li class="text-indigo-600">Home</li>
+            <li>About</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <main class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-8 py-20">
+        
+        <div class="hidden md:flex flex-col space-y-6 text-indigo-500 text-xl">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <div class="flex-1 md:ml-20">
+            <h1 class="text-6xl font-extrabold mb-2">Hi, I'm <span class="block">Ton Nom</span></h1>
+            <p class="text-2xl text-gray-500 mb-8">Futur Stagiaire en [Ton Domaine]</p>
+            <a href="mailto:tonemail@exemple.com" class="bg-indigo-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-indigo-700 transition">
+                Contact Me <i class="fas fa-paper-plane ml-2"></i>
+            </a>
+        </div>
+
+        <div class="mt-12 md:mt-0">
+            <div class="w-80 h-80 bg-gray-200 rounded-full overflow-hidden border-8 border-white shadow-xl" style="border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;">
+                <img src="TA-PHOTO.jpg" alt="Photo de moi" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
