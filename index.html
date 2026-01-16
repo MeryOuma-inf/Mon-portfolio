@@ -10,10 +10,10 @@
 <body class="bg-white text-gray-900 font-sans">
 
     <nav class="flex justify-between items-center p-8 max-w-6xl mx-auto">
-        <div class="text-xl font-bold">Meriem Louizini</div>
+        <div class="text-xl font-bold">TonNom</div>
         <ul class="flex space-x-6 font-medium text-gray-600">
-            <li class="text-indigo-600">Home</li>
-            <li>About</li>
+            <li class="text-emerald-600">Home</li>
+            <li><a href="#about" class="hover:text-emerald-600">About</a></li>
             <li>Portfolio</li>
             <li>Contact</li>
         </ul>
@@ -21,26 +21,51 @@
 
     <main class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-8 py-20">
         
-        <div class="hidden md:flex flex-col space-y-6 text-indigo-500 text-xl">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+        <div class="hidden md:flex flex-col space-y-6 text-emerald-500 text-xl">
+            <a href="#" class="hover:text-emerald-700 transition"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="hover:text-emerald-700 transition"><i class="fab fa-github"></i></a>
+            <a href="#" class="hover:text-emerald-700 transition"><i class="fab fa-twitter"></i></a>
         </div>
 
-        <div class="flex-1 md:ml-20">
-            <h1 class="text-6xl font-extrabold mb-2">Hi, I'm <span class="block">Ton Nom</span></h1>
-            <p class="text-2xl text-gray-500 mb-8">Futur Stagiaire en [Ton Domaine]</p>
-            <a href="mailto:tonemail@exemple.com" class="bg-indigo-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-indigo-700 transition">
-                Contact Me <i class="fas fa-paper-plane ml-2"></i>
+        <div class="flex-1 md:ml-20 text-center md:text-left">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Salut, je suis <span class="text-emerald-600 block mt-2">Ton Nom</span></h1>
+            <p class="text-xl md:text-2xl text-gray-500 mb-8">À la recherche d'un stage en [Ton Domaine]</p>
+            <a href="mailto:tonemail@exemple.com" class="bg-emerald-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-emerald-700 transition inline-flex items-center">
+                Contactez-moi <i class="fas fa-paper-plane ml-2"></i>
             </a>
         </div>
 
-        <div class="mt-12 md:mt-0">
-            <div class="w-80 h-80 bg-gray-200 rounded-full overflow-hidden border-8 border-white shadow-xl" style="border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;">
-                <img src="TA-PHOTO.jpg" alt="Photo de moi" class="w-full h-full object-cover">
+        <div class="mt-12 md:mt-0 font-bold text-white text-center">
+            <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-emerald-500 shadow-2xl mx-auto relative bg-gray-100">
+                <img src="ta-photo.jpg" alt="Photo de moi" class="w-full h-full object-cover relative z-10">
             </div>
         </div>
     </main>
+
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800">About Me</h2>
+                <span class="text-gray-500 block mt-2">My introduction</span>
+            </div>
+
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-sm text-center">
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    [C'est ici que tu vas écrire ton texte !] <br><br>
+                    Inspire-toi de l'image que tu as envoyée. Par exemple : "Je suis un(e) étudiant(e) passionné(e) par [ton domaine]. J'ai acquis des compétences en [compétence 1], [compétence 2] à travers mes projets académiques. Je suis curieux(se), motivé(e) et je cherche une opportunité de stage pour appliquer mes connaissances et apprendre au sein d'une équipe dynamique."
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Mon objectif est de me spécialiser en [ta spécialité]. N'hésitez pas à télécharger mon CV ci-dessous pour en savoir plus sur mon parcours.
+                </p>
+                
+                <div class="mt-8">
+                    <a href="#" class="inline-block border-2 border-emerald-600 text-emerald-600 font-bold py-3 px-8 rounded-lg hover:bg-emerald-600 hover:text-white transition">
+                        Télécharger mon CV <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
