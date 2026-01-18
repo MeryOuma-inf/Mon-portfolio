@@ -1,159 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meriem Louizini | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meriem LOUIZINI | Portfolio</title>
 
-  <!-- Favicon (icône onglet) -->
-  <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Icône onglet -->
+    <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- Fonts & Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <style>
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: #020617;
-      color: #e5e7eb;
-    }
-    .glass {
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-    .text-gradient {
-      background: linear-gradient(to right, #22c55e, #14b8a6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  </style>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #059669, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gradient-green {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+        }
+    </style>
 </head>
 
-<body>
+<body class="text-slate-800">
 
-<!-- NAV -->
 <nav class="fixed w-full z-50 px-6 py-4">
-  <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
-    <span class="text-2xl font-extrabold text-emerald-400">ML.</span>
-    <div class="hidden md:flex gap-8 text-sm font-semibold">
-      <a href="#home" class="hover:text-emerald-400">Accueil</a>
-      <a href="#about" class="hover:text-emerald-400">À propos</a>
-      <a href="#skills" class="hover:text-emerald-400">Compétences</a>
-      <a href="#projects" class="hover:text-emerald-400">Projets</a>
-      <a href="#contact" class="hover:text-emerald-400">Contact</a>
+    <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center shadow-lg">
+        <span class="text-2xl font-extrabold text-emerald-600 tracking-tighter">ML.</span>
+        <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-widest">
+            <a href="#home" class="hover:text-emerald-600 transition">Accueil</a>
+            <a href="#about" class="hover:text-emerald-600 transition">Parcours</a>
+            <a href="#projects" class="hover:text-emerald-600 transition">Projets</a>
+            <a href="#contact" class="hover:text-emerald-600 transition">Contact</a>
+        </div>
+        <a href="mailto:louizmeriem1@gmail.com" class="bg-gradient-green text-white px-5 py-2 rounded-xl text-sm font-bold shadow-md hover:scale-105 transition">
+            Me Contacter
+        </a>
     </div>
-  </div>
 </nav>
 
-<!-- HERO -->
-<section id="home" class="min-h-screen flex items-center px-6 pt-24">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-    <div data-aos="fade-right">
-      <h1 class="text-5xl font-extrabold mb-6">
-        Bonjour, je suis <span class="text-gradient">Meriem Louizini</span>
-      </h1>
-      <p class="text-slate-400 text-lg mb-8">
-        Étudiante en Licence 3 Informatique à Mulhouse.  
-        Passionnée par le développement, l’IA et les systèmes concrets orientés métier.
-      </p>
-      <div class="flex gap-4">
-        <a href="#projects" class="bg-emerald-500 text-slate-900 px-6 py-3 rounded-xl font-bold hover:scale-105 transition">
-          Voir mes projets
-        </a>
-        <a href="CVStage.pdf" target="_blank" class="border border-emerald-500 px-6 py-3 rounded-xl hover:bg-emerald-500 hover:text-slate-900 transition">
-          Télécharger mon CV
-        </a>
-      </div>
-    </div>
+<section id="home" class="min-h-screen flex items-center pt-20 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right" data-aos-duration="1000">
+            <h2 class="text-emerald-600 font-bold mb-4 tracking-widest uppercase italic">
+                Future Diplômée MIAGE
+            </h2>
+            <h1 class="text-6xl font-extrabold leading-tight mb-6">
+                Je suis <span class="text-gradient">Meriem LOUIZINI</span><br>
+                <span id="typewriter" class="text-slate-700"></span>
+            </h1>
+            <p class="text-lg text-slate-500 mb-8 max-w-lg leading-relaxed">
+                Actuellement en Licence 3 Informatique à l'Université de Haute Alsace.
+                Passionnée par le lien entre informatique et gestion.
+            </p>
+            <div class="flex space-x-4">
+                <a href="#projects" class="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-slate-800 transition shadow-xl">
+                    Mes Projets
+                </a>
+                <a href="CVStage.pdf" target="_blank" class="border-2 border-emerald-600 text-emerald-600 px-8 py-4 ro_
 
-    <div class="flex justify-center" data-aos="zoom-in">
-      <img src="page.jpg" alt="Meriem Louizini"
-           class="w-80 h-80 object-cover rounded-3xl shadow-2xl border border-slate-700">
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="py-24 px-6 bg-slate-900">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-    <img src="about.jpg" class="rounded-3xl shadow-xl" data-aos="fade-right">
-
-    <div data-aos="fade-left">
-      <h2 class="text-4xl font-extrabold mb-6 text-gradient">À propos de moi</h2>
-      <p class="text-slate-400 leading-relaxed">
-        J’aime comprendre les besoins, structurer une solution et la transformer
-        en application utile. Sérieuse, curieuse et collaborative, je vise un
-        Master MIAGE pour évoluer à l’interface entre informatique, gestion et entreprise.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="py-24 px-6">
-  <div class="max-w-6xl mx-auto text-center mb-16">
-    <h2 class="text-4xl font-extrabold text-gradient">Compétences</h2>
-  </div>
-
-  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-    <div class="glass p-6 rounded-2xl text-center" data-aos="fade-up">
-      <img src="DEV.jpg" class="rounded-xl mb-4">
-      <h3 class="font-bold text-xl mb-2">Développement</h3>
-      <p class="text-slate-400 text-sm">HTML, CSS, JavaScript, PHP, Java, SQL</p>
-    </div>
-
-    <div class="glass p-6 rounded-2xl text-center" data-aos="fade-up" data-aos-delay="100">
-      <img src="IA.jpg" class="rounded-xl mb-4">
-      <h3 class="font-bold text-xl mb-2">IA & Data</h3>
-      <p class="text-slate-400 text-sm">CNN, GAN, Python, Big Data, MapReduce</p>
-    </div>
-
-    <div class="glass p-6 rounded-2xl text-center" data-aos="fade-up" data-aos-delay="200">
-      <img src="Miage.jpg" class="rounded-xl mb-4">
-      <h3 class="font-bold text-xl mb-2">MIAGE & Gestion</h3>
-      <p class="text-slate-400 text-sm">Analyse des besoins, logique métier, collaboration</p>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="py-24 px-6 bg-slate-900">
-  <div class="max-w-6xl mx-auto text-center mb-16">
-    <h2 class="text-4xl font-extrabold text-gradient">Projets clés</h2>
-  </div>
-
-  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-    <div class="glass p-6 rounded-2xl">
-      <h3 class="font-bold mb-2">Application Full-Stack</h3>
-      <p class="text-slate-400 text-sm">Gestion d’accueil – HTML, CSS, JS, PHP, MySQL</p>
-    </div>
-    <div class="glass p-6 rounded-2xl">
-      <h3 class="font-bold mb-2">IA – Reconnaissance Faciale</h3>
-      <p class="text-slate-400 text-sm">CNN & GAN – Python</p>
-    </div>
-    <div class="glass p-6 rounded-2xl">
-      <h3 class="font-bold mb-2">IoT Intelligent</h3>
-      <p class="text-slate-400 text-sm">Node-RED, ESP32, Raspberry Pi</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<footer id="contact" class="py-16 text-center">
-  <h3 class="text-3xl font-extrabold text-gradient mb-6">Contact</h3>
-  <div class="flex justify-center gap-8 text-xl">
-    <a href="mailto:louizmeriem1@gmail.com" class="hover:text-emerald-400"><i class="fas fa-envelope"></i></a>
-    <a href="https://github.com" class="hover:text-emerald-400"><i class="fab fa-github"></i></a>
-    <a href="https://linkedin.com" class="hover:text-emerald-400"><i class="fab fa-linkedin"></i></a>
-  </div>
-</footer>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init({ once: true });</script>
-
-</body>
-</html>
