@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meriem Louizini | Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Fonts -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
   <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -43,20 +46,20 @@
 </nav>
 
 <!-- HERO -->
-<section class="min-h-screen flex items-center px-6 pt-20">
+<section class="min-h-screen flex items-center pt-24 px-6">
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    
     <div data-aos="fade-right">
       <p class="uppercase tracking-widest text-emerald-400 text-sm mb-4">
-        Étudiante en Informatique • Future MIAGE
+        Licence 3 Informatique • Future MIAGE
       </p>
-      <h1 class="text-5xl font-extrabold leading-tight mb-6">
+      <h1 class="text-5xl font-extrabold mb-6">
         Meriem <span class="gradient-text">Louizini</span>
       </h1>
       <p class="text-slate-400 text-lg mb-8 max-w-xl">
-        Je conçois des solutions informatiques concrètes en reliant
-        <strong>développement</strong>, <strong>données</strong> et
-        <strong>compréhension métier</strong>.
-        À la recherche d’un <strong>stage à partir de mai</strong>.
+        Je transforme des besoins concrets en solutions informatiques utiles,
+        en reliant développement, données et compréhension métier.
+        <br><strong>Stage recherché à partir de mai.</strong>
       </p>
 
       <div class="flex gap-4">
@@ -64,29 +67,39 @@
           Voir mes projets
         </a>
         <a href="CVStage.pdf" target="_blank" class="px-8 py-4 border border-emerald-400 rounded-xl font-bold hover:bg-emerald-400/10 transition">
-          Télécharger mon CV
+          Mon CV
         </a>
       </div>
     </div>
 
-    <div data-aos="zoom-in" class="flex justify-center">
-      <img src="photo.jpg" alt="Meriem Louizini"
-           class="w-80 h-80 object-cover rounded-3xl border-4 border-slate-800 shadow-2xl"/>
+    <div data-aos="zoom-in">
+      <img src="assets/images/hero.jpg"
+           alt="Meriem Louizini"
+           class="rounded-3xl shadow-2xl border border-slate-800">
     </div>
+
   </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="py-24 px-6 bg-slate-900">
-  <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-    <h2 class="text-4xl font-extrabold mb-6 gradient-text">À propos</h2>
-    <p class="text-slate-400 text-lg leading-relaxed">
-      Étudiante en Licence 3 Informatique à l’Université de Haute-Alsace,
-      je m’intéresse particulièrement au lien entre <strong>informatique</strong>,
-      <strong>gestion</strong> et <strong>innovation</strong>.
-      J’aime comprendre un besoin, le structurer techniquement et le transformer
-      en solution utile, fiable et évolutive.
-    </p>
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    
+    <img src="assets/images/about.jpg"
+         alt="À propos"
+         class="rounded-3xl shadow-xl border border-slate-800"
+         data-aos="fade-right">
+
+    <div data-aos="fade-left">
+      <h2 class="text-4xl font-extrabold mb-6 gradient-text">À propos</h2>
+      <p class="text-slate-400 text-lg leading-relaxed">
+        Étudiante en Licence 3 Informatique à l’Université de Haute-Alsace,
+        je m’intéresse au lien entre informatique, gestion et innovation.
+        J’aime analyser un besoin, structurer une solution et la concrétiser
+        à travers des projets utiles et bien pensés.
+      </p>
+    </div>
+
   </div>
 </section>
 
@@ -98,29 +111,32 @@
     <div class="grid md:grid-cols-3 gap-8">
 
       <div class="bg-slate-900 p-8 rounded-2xl" data-aos="fade-up">
-        <h3 class="font-bold text-xl mb-4">Développement</h3>
+        <img src="assets/images/dev.jpg" class="rounded-xl mb-4">
+        <h3 class="font-bold text-xl mb-2">Développement</h3>
         <p class="text-slate-400 text-sm">
           HTML, CSS, JavaScript<br>
-          PHP, MySQL, Java, C++<br>
-          API REST, WAMP
+          PHP, Java, C++<br>
+          MySQL, API REST
         </p>
       </div>
 
       <div class="bg-slate-900 p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
-        <h3 class="font-bold text-xl mb-4">IA & Data</h3>
+        <img src="assets/images/ai.jpg" class="rounded-xl mb-4">
+        <h3 class="font-bold text-xl mb-2">IA & Data</h3>
         <p class="text-slate-400 text-sm">
           Machine Learning, Deep Learning<br>
-          Scikit-learn, TensorFlow<br>
-          CNN, GAN, Big Data (MapReduce, YARN)
+          CNN, GAN<br>
+          Big Data (MapReduce, YARN)
         </p>
       </div>
 
       <div class="bg-slate-900 p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
-        <h3 class="font-bold text-xl mb-4">Gestion & MIAGE</h3>
+        <img src="assets/images/miage.jpg" class="rounded-xl mb-4">
+        <h3 class="font-bold text-xl mb-2">MIAGE & Gestion</h3>
         <p class="text-slate-400 text-sm">
           Économie générale<br>
           Modèles comptables<br>
-          Travail en équipe & organisation de projet
+          Travail en équipe & organisation
         </p>
       </div>
 
@@ -131,31 +147,31 @@
 <!-- PROJECTS -->
 <section id="projects" class="py-24 px-6 bg-slate-900">
   <div class="max-w-6xl mx-auto">
-    <h2 class="text-4xl font-extrabold text-center mb-16 gradient-text">Projets clés</h2>
+    <h2 class="text-4xl font-extrabold text-center mb-16 gradient-text">Projets</h2>
 
     <div class="grid md:grid-cols-3 gap-8">
 
       <div class="bg-slate-800 p-6 rounded-xl" data-aos="fade-up">
+        <img src="assets/images/project-web.jpg" class="rounded-lg mb-4">
         <h4 class="font-bold mb-2">Application Full-Stack</h4>
         <p class="text-sm text-slate-400">
-          Gestion de l’accueil d’un centre de formation.
-          Analyse des besoins, UML, front-end et back-end.
+          Gestion d’accueil d’un centre de formation (HTML, CSS, JS, PHP, MySQL).
         </p>
       </div>
 
       <div class="bg-slate-800 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/images/project-ai.jpg" class="rounded-lg mb-4">
         <h4 class="font-bold mb-2">IA – CNN & GAN</h4>
         <p class="text-sm text-slate-400">
-          Reconnaissance faciale et génération d’images
-          avec Python et Deep Learning.
+          Reconnaissance faciale et génération d’images en Python.
         </p>
       </div>
 
       <div class="bg-slate-800 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+        <img src="assets/images/project-iot.jpg" class="rounded-lg mb-4">
         <h4 class="font-bold mb-2">IoT Intelligent</h4>
         <p class="text-sm text-slate-400">
-          Éclairage public intelligent avec Node-RED,
-          ESP32 et Raspberry Pi.
+          Éclairage public intelligent avec Node-RED, ESP32 et Raspberry Pi.
         </p>
       </div>
 
@@ -165,8 +181,10 @@
 
 <!-- CONTACT -->
 <footer id="contact" class="py-16 text-center border-t border-slate-800">
-  <h3 class="text-3xl font-extrabold mb-4 gradient-text">Discutons</h3>
-  <p class="text-slate-400 mb-8">Ouverte aux opportunités de stage et d’alternance MIAGE</p>
+  <h3 class="text-3xl font-extrabold mb-4 gradient-text">Contact</h3>
+  <p class="text-slate-400 mb-8">
+    Stage à partir de mai • Ouverte à une alternance MIAGE
+  </p>
 
   <div class="flex justify-center gap-8 text-2xl">
     <a href="mailto:louizmeriem1@gmail.com" class="hover:text-emerald-400"><i class="fas fa-envelope"></i></a>
@@ -182,4 +200,5 @@
 
 </body>
 </html>
+
 
