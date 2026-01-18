@@ -1,121 +1,207 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Meriem LOUIZINI</title>
+    <title>Meriem Louizini | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
+        .text-gradient { background: linear-gradient(to right, #059669, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-gradient-green { background: linear-gradient(135deg, #059669 0%, #10b981 100%); }
+    </style>
 </head>
-<body class="bg-white text-gray-900 font-sans">
+<body class="text-slate-800">
 
-    <nav class="flex justify-between items-center p-6 max-w-6xl mx-auto sticky top-0 bg-white z-50">
-        <div class="text-xl font-bold">Meriem</div>
-        <ul class="flex space-x-6 font-medium text-gray-600">
-            <li><a href="#" class="hover:text-emerald-600">Home</a></li>
-            <li><a href="#about" class="hover:text-emerald-600">About</a></li>
-            <li><a href="#qualifications" class="hover:text-emerald-600">Qualifications</a></li>
-            <li><a href="#contact" class="hover:text-emerald-600">Contact</a></li>
-        </ul>
+    <nav class="fixed w-full z-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center shadow-lg">
+            <span class="text-2xl font-extrabold text-emerald-600 tracking-tighter">ML.</span>
+            <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-widest">
+                <a href="#home" class="hover:text-emerald-600 transition">Accueil</a>
+                <a href="#about" class="hover:text-emerald-600 transition">À Propos</a>
+                <a href="#projects" class="hover:text-emerald-600 transition">Projets</a>
+                <a href="#contact" class="hover:text-emerald-600 transition">Contact</a>
+            </div>
+            <a href="mailto:louizmeriem1@gmail.com" class="bg-gradient-green text-white px-5 py-2 rounded-xl text-sm font-bold shadow-md hover:scale-105 transition">Hire Me</a>
+        </div>
     </nav>
 
-    <main class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-8 py-20">
-        <div class="hidden md:flex flex-col space-y-6 text-emerald-500 text-xl">
-            <a href="#"><i class="fab fa-linkedin hover:text-emerald-700"></i></a>
-            <a href="#"><i class="fab fa-github hover:text-emerald-700"></i></a>
-        </div>
-        <div class="flex-1 md:ml-20">
-            <h1 class="text-5xl font-extrabold mb-4">Hi, I'm <span class="text-emerald-600">Meriem</span></h1>
-            <p class="text-2xl text-gray-500 mb-8 font-medium">Étudiante en Informatique</p>
-            <a href="mailto:votre-email@gmail.com" class="bg-emerald-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-emerald-700 transition shadow-lg">
-                Contact Me <i class="fas fa-paper-plane ml-2"></i>
-            </a>
-        </div>
-        <div class="mt-12 md:mt-0">
-            <div class="w-72 h-72 rounded-full overflow-hidden border-8 border-white shadow-2xl bg-emerald-100">
-                <img src="photo.jpg" alt="Photo Meriem" class="w-full h-full object-cover">
+    <section id="home" class="min-h-screen flex items-center pt-20 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <h2 class="text-emerald-600 font-bold mb-4 tracking-widest uppercase">Bienvenue sur mon portfolio</h2>
+                <h1 class="text-6xl md:text-7xl font-extrabold leading-tight mb-6">
+                    Je suis <span class="text-gradient">Meriem</span><br>
+                    <span id="typewriter" class="text-slate-700"></span>
+                </h1>
+                <p class="text-lg text-slate-500 mb-8 max-w-lg leading-relaxed">
+                    Étudiante en Licence 3 Informatique à l'Université de Haute Alsace[cite: 35, 39]. Passionnée par la création de solutions numériques et l'IA[cite: 36, 55].
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-slate-800 transition shadow-xl">Voir mes travaux</a>
+                    <div class="flex items-center space-x-4 text-2xl ml-6">
+                        <a href="https://linkedin.com" class="text-slate-400 hover:text-emerald-600 transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com" class="text-slate-400 hover:text-emerald-600 transition"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="relative flex justify-center" data-aos="zoom-in" data-aos-duration="1200">
+                <div class="absolute inset-0 bg-emerald-200 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+                <img src="photo.jpg" alt="Meriem Louizini" class="relative w-80 h-80 md:w-[450px] md:h-[450px] object-cover rounded-[3rem] shadow-2xl border-8 border-white">
             </div>
         </div>
-    </main>
+    </section>
 
-    <section id="about" class="py-20">
-        <div class="max-w-4xl mx-auto px-8">
+    <section class="py-12 bg-white border-y border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div data-aos="fade-up">
+                <p class="text-4xl font-black text-emerald-600">L3</p>
+                <p class="text-slate-400 font-medium">Informatique @UHA [cite: 38, 39]</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <p class="text-4xl font-black text-emerald-600">FullStack</p>
+                <p class="text-slate-400 font-medium">PHP, MySQL, JS [cite: 7, 8]</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <p class="text-4xl font-black text-emerald-600">AI/IA</p>
+                <p class="text-slate-400 font-medium">Deep Learning [cite: 9, 10]</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300">
+                <p class="text-4xl font-black text-emerald-600">IoT</p>
+                <p class="text-slate-400 font-medium">Node-RED & ESP32 [cite: 64]</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold">About Me</h2>
-                <p class="text-gray-500 italic">My introduction</p>
+                <h2 class="text-4xl font-extrabold mb-4">Mon Parcours</h2>
+                <div class="w-20 h-1.5 bg-emerald-500 mx-auto rounded-full"></div>
             </div>
-            
-            <div class="flex flex-col md:flex-row gap-12 items-center">
-                <div class="flex-1 grid grid-cols-3 gap-4 opacity-80">
-                   <i class="fab fa-html5 text-5xl text-orange-500"></i>
-                   <i class="fab fa-css3-alt text-5xl text-blue-500"></i>
-                   <i class="fab fa-js text-5xl text-yellow-400"></i>
-                   <i class="fab fa-python text-5xl text-blue-800"></i>
-                   <i class="fab fa-react text-5xl text-cyan-400"></i>
+
+            <div class="grid md:grid-cols-2 gap-16">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-8 flex items-center">
+                        <i class="fas fa-graduation-cap mr-4 text-emerald-600"></i> Formations [cite: 37]
+                    </h3>
+                    <div class="space-y-8 border-l-2 border-emerald-100 pl-8">
+                        <div class="relative">
+                            <div class="absolute -left-[37px] top-1 w-4 h-4 bg-emerald-500 rounded-full"></div>
+                            <h4 class="font-bold text-lg">Licence 3 en informatique [cite: 38]</h4>
+                            <p class="text-emerald-600 font-semibold text-sm">2025 - Présent [cite: 40]</p>
+                            <p class="text-slate-500">Université de Haute Alsace-Mulhouse [cite: 39]</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[37px] top-1 w-4 h-4 bg-emerald-300 rounded-full"></div>
+                            <h4 class="font-bold text-lg">Master 1 Systèmes Intelligents [cite: 41]</h4>
+                            <p class="text-emerald-600 font-semibold text-sm">2024 - 2025 [cite: 42]</p>
+                            <p class="text-slate-500 text-sm italic">Université Mouloud Mammeri [cite: 41]</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="flex-1">
-                    <p class="text-gray-600 leading-relaxed text-lg mb-8">
-                        Je suis Meriem, une étudiante passionnée par le développement informatique. 
-                        Je me concentre sur la création d'applications web modernes et la résolution de problèmes complexes. 
-                        Mon parcours académique m'a permis d'acquérir des bases solides en algorithmique et en gestion de bases de données.
-                    </p>
-                    <a href="cv.pdf" class="bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 inline-block shadow-md">
-                        Download CV <i class="fas fa-download ml-2"></i>
-                    </a>
+
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-8 flex items-center">
+                        <i class="fas fa-briefcase mr-4 text-emerald-600"></i> Expérience Clé [cite: 47]
+                    </h3>
+                    <div class="glass p-8 rounded-3xl shadow-sm border-l-8 border-emerald-500">
+                        <h4 class="font-bold text-xl mb-2">Stage Développeur Full-Stack [cite: 48, 49]</h4>
+                        <p class="text-emerald-600 font-bold mb-4">2023 - 2024 [cite: 50]</p>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            Conception d'une application de gestion d'accueil[cite: 51, 59]. Stack: HTML, CSS, JS, PHP, MySQL[cite: 52].
+                        </p>
+                        <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-lg text-xs font-bold uppercase">CFP Kerrad Rachid </span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="qualifications" class="py-20 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold">Qualifications</h2>
-                <p class="text-gray-500 italic">My personal journey</p>
+    <section id="projects" class="py-24 bg-slate-900 text-white px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <h2 class="text-4xl font-extrabold mb-4">Projets Phares</h2>
+                    <p class="text-slate-400">Sélection de mes travaux académiques et personnels [cite: 54]</p>
+                </div>
+                <a href="https://github.com" class="hidden md:block text-emerald-400 font-bold border-b-2 border-emerald-400 pb-1">Voir tout sur GitHub</a>
             </div>
 
-            <div class="flex justify-center space-x-12 mb-12">
-                <div class="text-emerald-600 font-bold text-xl cursor-pointer">
-                    <i class="fas fa-graduation-cap mr-2"></i> Education
-                </div>
-                <div class="text-gray-400 font-bold text-xl cursor-not-allowed">
-                    <i class="fas fa-briefcase mr-2"></i> Work
-                </div>
-            </div>
-
-            <div class="relative border-l-2 border-emerald-400 ml-4 md:mx-auto md:w-0">
-                
-                <div class="mb-12 relative">
-                    <div class="absolute -left-1.5 w-3 h-3 bg-emerald-600 rounded-full"></div>
-                    <div class="ml-8 md:w-80 md:absolute md:-left-96 md:text-right md:ml-0">
-                        <h3 class="text-xl font-bold">Diplôme ou Formation</h3>
-                        <p class="text-gray-500">Nom de ton Université / École</p>
-                        <p class="text-sm text-gray-400"><i class="far fa-calendar-alt"></i> 2023 - Présent</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group bg-slate-800 rounded-3xl p-8 hover:-translate-y-4 transition duration-500 border border-slate-700" data-aos="fade-up">
+                    <div class="text-emerald-500 text-4xl mb-6"><i class="fas fa-brain"></i></div>
+                    <h4 class="text-xl font-bold mb-3">Reconnaissance Faciale (CNN) [cite: 57]</h4>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Classification d'images via Python, TensorFlow et Kaggle[cite: 57, 10].</p>
+                    <div class="flex space-x-2">
+                        <span class="text-[10px] border border-slate-600 px-2 py-1 rounded-full">Python</span>
+                        <span class="text-[10px] border border-slate-600 px-2 py-1 rounded-full">Kaggle</span>
                     </div>
                 </div>
 
-                <div class="mb-12 relative">
-                    <div class="absolute -left-1.5 w-3 h-3 bg-emerald-600 rounded-full"></div>
-                    <div class="ml-8 md:w-80 md:pl-8">
-                        <h3 class="text-xl font-bold">Baccalauréat / Autre</h3>
-                        <p class="text-gray-500">Lycée ou Centre de formation</p>
-                        <p class="text-sm text-gray-400"><i class="far fa-calendar-alt"></i> 2020 - 2022</p>
+                <div class="group bg-slate-800 rounded-3xl p-8 hover:-translate-y-4 transition duration-500 border border-slate-700" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-emerald-500 text-4xl mb-6"><i class="fas fa-microchip"></i></div>
+                    <h4 class="text-xl font-bold mb-3">Éclairage Public IoT [cite: 63]</h4>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Solution intelligente avec Node-RED, ESP32 et Raspberry Pi[cite: 64, 15].</p>
+                    <div class="flex space-x-2">
+                        <span class="text-[10px] border border-slate-600 px-2 py-1 rounded-full">ESP32</span>
+                        <span class="text-[10px] border border-slate-600 px-2 py-1 rounded-full">Node-RED</span>
                     </div>
                 </div>
 
+                <div class="group bg-slate-800 rounded-3xl p-8 hover:-translate-y-4 transition duration-500 border border-slate-700" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-emerald-500 text-4xl mb-6"><i class="fas fa-laptop-code"></i></div>
+                    <h4 class="text-xl font-bold mb-3">Cabinet Médical REST [cite: 60]</h4>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Système de gestion complet développé en Java et SQL[cite: 61].</p>
+                    <div class="flex space-x-2">
+                        <span class="text-[10px] border border-slate-600 px-2 py-1 rounded-full">Java</span>
+                        <span class="text-[10px] border border-slate-600 px-2 py-1 rounded-full">REST API</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="py-12 bg-emerald-900 text-white text-center">
-        <h3 class="text-2xl font-bold mb-4">Meriem</h3>
-        <p class="mb-6">Toujours ouverte à de nouvelles opportunités.</p>
-        <div class="flex justify-center space-x-6 text-2xl">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
+    <footer id="contact" class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-extrabold mb-8">Discutons de mon prochain stage !</h2>
+            <p class="text-slate-500 mb-10 text-lg max-w-xl mx-auto">
+                Je recherche un stage de 12 semaines pour mettre à profit mes compétences en développement et gestion[cite: 35, 36].
+            </p>
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <div class="glass p-6 rounded-2xl flex items-center justify-center space-x-4">
+                    <i class="fas fa-envelope text-emerald-600"></i>
+                    <span class="font-semibold text-sm">louizmeriem1@gmail.com [cite: 4]</span>
+                </div>
+                <div class="glass p-6 rounded-2xl flex items-center justify-center space-x-4">
+                    <i class="fas fa-map-marker-alt text-emerald-600"></i>
+                    <span class="font-semibold text-sm">Mulhouse 68100 [cite: 5]</span>
+                </div>
+            </div>
+            <p class="text-slate-400 text-sm">© 2026 Meriem Louizini. Fait avec passion.</p>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Init animations
+        AOS.init({ once: true });
+
+        // Typewriter Effect
+        const text = "Développeuse Full-Stack & Étudiante en Informatique";
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("typewriter").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        window.onload = typeWriter;
+    </script>
 </body>
 </html>
