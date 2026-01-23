@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meriem Louizini | Portfolio</title>
 
-  <!-- Tailwind & libs -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,50 +14,56 @@
   <style>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: background-color .5s, color .5s;
+    }
+
+    .dark {
       background-color: #020617;
       color: #e5e7eb;
     }
-    .glass {
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.1);
+
+    .light {
+      background-color: #f8fafc;
+      color: #020617;
     }
+
+    .glass {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
     .text-gradient {
       background: linear-gradient(to right, #22c55e, #14b8a6);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    /* COMPETENCES */
+    /* COMPETENCES – DOUX */
     .skill-card {
-      transition: transform .4s ease, box-shadow .4s ease;
+      transition: transform .6s ease, box-shadow .6s ease;
     }
     .skill-card:hover {
-      transform: translateY(-12px) scale(1.04);
-      box-shadow: 0 25px 45px rgba(16,185,129,0.3);
-    }
-    .skill-card img {
-      transition: transform .5s ease;
-    }
-    .skill-card:hover img {
-      transform: scale(1.1);
+      transform: translateY(-6px);
+      box-shadow: 0 18px 30px rgba(16,185,129,0.25);
     }
 
     /* PROJETS */
     .project-item {
       display: none;
       opacity: 0;
-      transition: opacity .6s ease;
+      transition: opacity 1s ease;
     }
   </style>
 </head>
 
-<body>
+<body class="dark">
 
 <!-- NAV -->
 <nav class="fixed w-full z-50 px-6 py-4">
   <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
     <span class="text-2xl font-extrabold text-emerald-400">ML.</span>
+
     <div class="hidden md:flex gap-8 text-sm font-semibold">
       <a href="#home" class="hover:text-emerald-400">Accueil</a>
       <a href="#about" class="hover:text-emerald-400">À propos</a>
@@ -65,6 +71,11 @@
       <a href="#projects" class="hover:text-emerald-400">Projets</a>
       <a href="#contact" class="hover:text-emerald-400">Contact</a>
     </div>
+
+    <!-- THEME TOGGLE -->
+    <button onclick="toggleTheme()" class="text-xl hover:scale-110 transition">
+      <i id="themeIcon" class="fas fa-sun"></i>
+    </button>
   </div>
 </nav>
 
@@ -77,7 +88,7 @@
       </h1>
       <p class="text-slate-400 text-lg mb-8">
         Étudiante en Licence 3 Informatique à Mulhouse.  
-        Passionnée par le développement, l’IA et les systèmes orientés métier.
+        Passionnée par le développement, l’IA et les systèmes concrets orientés métier.
       </p>
       <div class="flex gap-4 flex-wrap">
         <a href="#projects" class="bg-emerald-500 text-slate-900 px-6 py-3 rounded-xl font-bold hover:scale-105 transition">
@@ -103,9 +114,9 @@
     <div data-aos="fade-left">
       <h2 class="text-4xl font-extrabold mb-6 text-gradient">À propos de moi</h2>
       <p class="text-slate-400 leading-relaxed">
-        J’aime analyser les besoins, structurer des solutions et les transformer
-        en applications utiles. Sérieuse, curieuse et impliquée, je vise un
-        Master MIAGE.
+        J’aime comprendre les besoins, structurer une solution et la transformer
+        en application utile. Sérieuse, curieuse et collaborative, je vise un
+        Master MIAGE pour évoluer à l’interface entre informatique, gestion et entreprise.
       </p>
     </div>
   </div>
@@ -121,19 +132,19 @@
     <div class="glass p-6 rounded-2xl text-center skill-card">
       <img src="DEV.jfif" class="rounded-xl mb-4 w-64 h-64 object-cover mx-auto">
       <h3 class="font-bold text-xl mb-2">Développement</h3>
-      <p class="text-slate-400 text-sm">HTML, CSS, JS, PHP, Java, SQL</p>
+      <p class="text-slate-400 text-sm">HTML, CSS, JavaScript, PHP, Java, SQL</p>
     </div>
 
     <div class="glass p-6 rounded-2xl text-center skill-card">
       <img src="IA.jfif" class="rounded-xl mb-4 w-64 h-64 object-cover mx-auto">
       <h3 class="font-bold text-xl mb-2">IA & Data</h3>
-      <p class="text-slate-400 text-sm">CNN, GAN, Python, Deep Learning</p>
+      <p class="text-slate-400 text-sm">CNN, GAN, Python, Big Data, MapReduce</p>
     </div>
 
     <div class="glass p-6 rounded-2xl text-center skill-card">
       <img src="Miage.jfif" class="rounded-xl mb-4 w-64 h-64 object-cover mx-auto">
       <h3 class="font-bold text-xl mb-2">MIAGE & Gestion</h3>
-      <p class="text-slate-400 text-sm">Analyse métier, collaboration</p>
+      <p class="text-slate-400 text-sm">Analyse des besoins, logique métier, collaboration</p>
     </div>
   </div>
 </section>
@@ -145,42 +156,25 @@
   </div>
 
   <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-
     <div class="glass p-6 rounded-2xl project-item">
       <h3 class="font-bold text-emerald-400 mb-2">Stage – Gestion d’accueil</h3>
       <p class="text-slate-400 text-sm">Étude des besoins, UML, application web</p>
-      <p class="text-xs italic text-slate-500">HTML, PHP, MySQL – 3 mois</p>
-    </div>
-
-    <div class="glass p-6 rounded-2xl project-item">
-      <h3 class="font-bold text-emerald-400 mb-2">REST – Cabinet Médical</h3>
-      <p class="text-slate-400 text-sm">API REST de gestion médicale</p>
-      <p class="text-xs italic text-slate-500">Java, SQL</p>
     </div>
 
     <div class="glass p-6 rounded-2xl project-item">
       <h3 class="font-bold text-emerald-400 mb-2">CNN – Expressions faciales</h3>
-      <p class="text-slate-400 text-sm">CNN optimisé ResNet-like</p>
-      <p class="text-xs italic text-slate-500">Python, Deep Learning</p>
+      <p class="text-slate-400 text-sm">Optimisation ResNet-like</p>
     </div>
 
     <div class="glass p-6 rounded-2xl project-item">
       <h3 class="font-bold text-emerald-400 mb-2">DCGAN – MNIST</h3>
-      <p class="text-slate-400 text-sm">Génération d’images réalistes</p>
-      <p class="text-xs italic text-slate-500">GAN, Python</p>
-    </div>
-
-    <div class="glass p-6 rounded-2xl project-item">
-      <h3 class="font-bold text-emerald-400 mb-2">C++ – Questionnaires</h3>
-      <p class="text-slate-400 text-sm">Apprentissage & évaluation</p>
+      <p class="text-slate-400 text-sm">Génération d’images</p>
     </div>
 
     <div class="glass p-6 rounded-2xl project-item">
       <h3 class="font-bold text-emerald-400 mb-2">IoT – Éclairage intelligent</h3>
-      <p class="text-slate-400 text-sm">Optimisation énergétique</p>
-      <p class="text-xs italic text-slate-500">Node-RED, ESP32</p>
+      <p class="text-slate-400 text-sm">Node-RED, ESP32</p>
     </div>
-
   </div>
 </section>
 
@@ -188,20 +182,30 @@
 <footer id="contact" class="py-16 text-center">
   <h3 class="text-3xl font-extrabold text-gradient mb-6">Contact</h3>
   <div class="flex justify-center gap-8 text-xl">
-    <a href="mailto:louizmeriem1@gmail.com" class="hover:text-emerald-400"><i class="fas fa-envelope"></i></a>
-    <a href="https://github.com/MeryOuma-inf" target="_blank" class="hover:text-emerald-400"><i class="fab fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/meriem-l" target="_blank" class="hover:text-emerald-400"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:louizmeriem1@gmail.com"><i class="fas fa-envelope"></i></a>
+    <a href="https://github.com/MeryOuma-inf" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/meriem-l" target="_blank"><i class="fab fa-linkedin"></i></a>
   </div>
 </footer>
 
-<!-- SCRIPTS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init({ once: true });</script>
 
 <script>
+  /* THEME */
+  const body = document.body;
+  const icon = document.getElementById("themeIcon");
+
+  function toggleTheme() {
+    body.classList.toggle("dark");
+    body.classList.toggle("light");
+    icon.classList.toggle("fa-sun");
+    icon.classList.toggle("fa-moon");
+  }
+
+  /* PROJECT ROTATION (LENT) */
   const projects = document.querySelectorAll('.project-item');
   let index = 0;
-  const visible = 2;
 
   function rotateProjects() {
     projects.forEach(p => {
@@ -209,16 +213,17 @@
       p.style.opacity = 0;
     });
 
-    for (let i = 0; i < visible; i++) {
+    for (let i = 0; i < 2; i++) {
       const p = projects[(index + i) % projects.length];
       p.style.display = 'block';
-      setTimeout(() => p.style.opacity = 1, 100);
+      setTimeout(() => p.style.opacity = 1, 150);
     }
-    index = (index + visible) % projects.length;
+
+    index = (index + 2) % projects.length;
   }
 
   rotateProjects();
-  setInterval(rotateProjects, 4000);
+  setInterval(rotateProjects, 6000);
 </script>
 
 </body>
