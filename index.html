@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meriem Louizini-Portfolio</title>
- <link rel="icon" type="image/png" href="logo.png">
+  <title>Meriem Louizini - Portfolio</title>
 
-
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="logo.png">
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -20,15 +20,8 @@
       transition: background-color .5s, color .5s;
     }
 
-    .dark {
-      background-color: #020617;
-      color: #e5e7eb;
-    }
-
-    .light {
-      background-color: #f8fafc;
-      color: #020617;
-    }
+    .dark { background-color: #020617; color: #e5e7eb; }
+    .light { background-color: #f8fafc; color: #020617; }
 
     .glass {
       background: rgba(255,255,255,0.08);
@@ -42,7 +35,6 @@
       -webkit-text-fill-color: transparent;
     }
 
-    /* COMPETENCES – DOUX */
     .skill-card {
       transition: transform .6s ease, box-shadow .6s ease;
     }
@@ -51,7 +43,6 @@
       box-shadow: 0 18px 30px rgba(16,185,129,0.25);
     }
 
-    /* PROJETS */
     .project-item {
       display: none;
       opacity: 0;
@@ -72,14 +63,13 @@
       <a href="#about" class="hover:text-emerald-400">À propos</a>
       <a href="#skills" class="hover:text-emerald-400">Compétences</a>
       <a href="#projects" class="hover:text-emerald-400">Projets</a>
+      <a href="#certifications" class="hover:text-emerald-400">Certifications</a>
       <a href="#contact" class="hover:text-emerald-400">Contact</a>
     </div>
 
-    <!-- THEME TOGGLE -->
-<button onclick="toggleTheme()" 
-  class="text-xl hover:scale-110 transition text-yellow-400 dark:text-yellow-300">
-
-      <i id="themeIcon" class="fas fa-sun"></i>
+    <!-- THEME -->
+    <button onclick="toggleTheme()" class="text-xl transition">
+      <i id="themeIcon" class="fas fa-sun text-yellow-400"></i>
     </button>
   </div>
 </nav>
@@ -92,8 +82,8 @@
         Bonjour, je suis <span class="text-gradient">Meriem Louizini</span>
       </h1>
       <p class="text-slate-400 text-lg mb-8">
-        Étudiante en Licence 3 Informatique à Mulhouse.  
-        Passionnée par le développement, l’IA et les systèmes concrets orientés métier.
+        Étudiante en Licence 3 Informatique à Mulhouse, orientée développement,
+        data et systèmes concrets à impact métier.
       </p>
       <div class="flex gap-4 flex-wrap">
         <a href="#projects" class="bg-emerald-500 text-slate-900 px-6 py-3 rounded-xl font-bold hover:scale-105 transition">
@@ -117,11 +107,11 @@
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
     <img src="about.jfif" class="rounded-3xl shadow-xl w-80 h-80 object-cover" data-aos="fade-right">
     <div data-aos="fade-left">
-      <h2 class="text-4xl font-extrabold mb-6 text-gradient">À propos de moi</h2>
+      <h2 class="text-4xl font-extrabold mb-6 text-gradient">À propos</h2>
       <p class="text-slate-400 leading-relaxed">
-        J’aime comprendre les besoins, structurer une solution et la transformer
-        en application utile. Sérieuse, curieuse et collaborative, je vise un
-        Master MIAGE pour évoluer à l’interface entre informatique, gestion et entreprise.
+        Curieuse, rigoureuse et orientée solution, j’aime analyser un besoin,
+        structurer une réponse technique et la transformer en application utile.
+        Mon objectif est d’intégrer un Master MIAGE en alternance.
       </p>
     </div>
   </div>
@@ -129,56 +119,86 @@
 
 <!-- SKILLS -->
 <section id="skills" class="py-24 px-6">
-  <div class="text-center mb-16">
-    <h2 class="text-4xl font-extrabold text-gradient">Compétences</h2>
-  </div>
+  <h2 class="text-center text-4xl font-extrabold text-gradient mb-16">Compétences</h2>
 
   <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
     <div class="glass p-6 rounded-2xl text-center skill-card">
       <img src="DEV.jfif" class="rounded-xl mb-4 w-64 h-64 object-cover mx-auto">
-      <h3 class="font-bold text-xl mb-2">Développement</h3>
+      <h3 class="font-bold text-xl">Développement</h3>
       <p class="text-slate-400 text-sm">HTML, CSS, JavaScript, PHP, Java, SQL</p>
     </div>
 
     <div class="glass p-6 rounded-2xl text-center skill-card">
       <img src="IA.jfif" class="rounded-xl mb-4 w-64 h-64 object-cover mx-auto">
-      <h3 class="font-bold text-xl mb-2">IA & Data</h3>
-      <p class="text-slate-400 text-sm">CNN, GAN, Python, Big Data, MapReduce</p>
+      <h3 class="font-bold text-xl">IA & Data</h3>
+      <p class="text-slate-400 text-sm">CNN, GAN, Python, Big Data</p>
     </div>
 
     <div class="glass p-6 rounded-2xl text-center skill-card">
       <img src="Miage.jfif" class="rounded-xl mb-4 w-64 h-64 object-cover mx-auto">
-      <h3 class="font-bold text-xl mb-2">MIAGE & Gestion</h3>
-      <p class="text-slate-400 text-sm">Analyse des besoins, logique métier, collaboration</p>
+      <h3 class="font-bold text-xl">MIAGE & Gestion</h3>
+      <p class="text-slate-400 text-sm">Analyse métier, modélisation, travail d’équipe</p>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="py-24 px-6 bg-slate-900">
-  <div class="text-center mb-16">
-    <h2 class="text-4xl font-extrabold text-gradient">Projets académiques & professionnels</h2>
-  </div>
+  <h2 class="text-center text-4xl font-extrabold text-gradient mb-16">Projets</h2>
 
   <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
     <div class="glass p-6 rounded-2xl project-item">
-      <h3 class="font-bold text-emerald-400 mb-2">Stage – Gestion d’accueil</h3>
-      <p class="text-slate-400 text-sm">Étude des besoins, UML, application web</p>
+      <h3 class="font-bold text-emerald-400">Stage – Application de gestion d’accueil</h3>
+      <p class="text-slate-400 text-sm">
+        Analyse des besoins, modélisation UML et développement d’une application
+        web facilitant la gestion quotidienne.
+      </p>
     </div>
 
     <div class="glass p-6 rounded-2xl project-item">
-      <h3 class="font-bold text-emerald-400 mb-2">CNN – Expressions faciales</h3>
-      <p class="text-slate-400 text-sm">Optimisation ResNet-like</p>
+      <h3 class="font-bold text-emerald-400">Service Web REST – Cabinet médical</h3>
+      <p class="text-slate-400 text-sm">
+        Conception d’une API REST pour la gestion des patients, médecins et rendez-vous.
+      </p>
     </div>
 
     <div class="glass p-6 rounded-2xl project-item">
-      <h3 class="font-bold text-emerald-400 mb-2">DCGAN – MNIST</h3>
-      <p class="text-slate-400 text-sm">Génération d’images</p>
+      <h3 class="font-bold text-emerald-400">Deep Learning – Reconnaissance faciale</h3>
+      <p class="text-slate-400 text-sm">
+        Modèle CNN optimisé type ResNet pour la classification des expressions faciales.
+      </p>
     </div>
 
     <div class="glass p-6 rounded-2xl project-item">
-      <h3 class="font-bold text-emerald-400 mb-2">IoT – Éclairage intelligent</h3>
-      <p class="text-slate-400 text-sm">Node-RED, ESP32</p>
+      <h3 class="font-bold text-emerald-400">IoT – Éclairage public intelligent</h3>
+      <p class="text-slate-400 text-sm">
+        Système automatisé d’optimisation énergétique via capteurs et microcontrôleurs.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="py-24 px-6">
+  <h2 class="text-center text-4xl font-extrabold text-gradient mb-16">Certifications</h2>
+
+  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <div class="glass p-6 rounded-2xl text-center">
+      <i class="fas fa-certificate text-3xl text-emerald-400 mb-4"></i>
+      <h3 class="font-bold">Bases du Deep Learning</h3>
+      <p class="text-slate-400 text-sm">CNN, réseaux neuronaux</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl text-center">
+      <i class="fas fa-database text-3xl text-emerald-400 mb-4"></i>
+      <h3 class="font-bold">SQL & Bases de données</h3>
+      <p class="text-slate-400 text-sm">Modélisation & requêtes avancées</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl text-center">
+      <i class="fas fa-code text-3xl text-emerald-400 mb-4"></i>
+      <h3 class="font-bold">Développement Web</h3>
+      <p class="text-slate-400 text-sm">Front-end & back-end</p>
     </div>
   </div>
 </section>
@@ -197,7 +217,6 @@
 <script>AOS.init({ once: true });</script>
 
 <script>
-  /* THEME */
   const body = document.body;
   const icon = document.getElementById("themeIcon");
 
@@ -208,22 +227,16 @@
     icon.classList.toggle("fa-moon");
   }
 
-  /* PROJECT ROTATION (LENT) */
   const projects = document.querySelectorAll('.project-item');
   let index = 0;
 
   function rotateProjects() {
-    projects.forEach(p => {
-      p.style.display = 'none';
-      p.style.opacity = 0;
-    });
-
+    projects.forEach(p => { p.style.display = 'none'; p.style.opacity = 0; });
     for (let i = 0; i < 2; i++) {
       const p = projects[(index + i) % projects.length];
       p.style.display = 'block';
       setTimeout(() => p.style.opacity = 1, 150);
     }
-
     index = (index + 2) % projects.length;
   }
 
@@ -233,3 +246,4 @@
 
 </body>
 </html>
+
